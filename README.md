@@ -1,14 +1,14 @@
-# AIengineer
-Testing Google Auto Complete Functionality
+# FaceBookPhotoupload
 
+Testing this functionality involves following process.
 
-Step 1:- Clone this repository into your respective IDE
+Note1:- Login details are located in data/config.properties file -- Please set login details of your facebook.Set Absolute path for your photo. 
 
-Step 2:- Run mvn -U clean install
+Step1:- Clone the Master branch of this repository through any IDE by taking the URI of this repository.
 
-a) mvn clean
-b) mvn install
+Step2:- Now your IDE will have code
 
-"Step 2" runs the respective test cases.
- 
-step 3:- Now check the reports under target/surefire-reports
+Step3:- Now run maven clean, maven install and then maven test.
+
+Step4:- Latest results you can find by refreshing the project,  Now you have results of the execution under target/surefire-reports.
+

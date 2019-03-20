@@ -2,9 +2,9 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.test.maven</groupId>
-    <artifactId>FacebookPhotoverify</artifactId>
+    <artifactId>FaceBookphotoverify-maven-build</artifactId>
     <version>1</version>
-    <name>FacebookPhotoverify-build</name>
+    <name>FaceBookphotoverify-maven-build</name>
     <build>
         <!-- Source directory configuration -->
         <sourceDirectory>src</sourceDirectory>
@@ -15,13 +15,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14.1</version>
                 <configuration>
+                <testFailureIgnore>true</testFailureIgnore>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-            <!-- Compiler plugin configures the java version to be usedfor compiling 
+            <!-- Compiler plugin configures the java version to be used for compiling 
                 the code -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -44,13 +45,5 @@
             <artifactId>testng</artifactId>
             <version>6.3.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>3.1.4</version>
-			<scope>provided</scope>
-		</dependency>
     </dependencies>
 </project>

@@ -20,34 +20,34 @@ public class TestFaceBookPhotoMessage extends BasePage{
 	@BeforeClass
 	public void setUp() {
 		initialization();
-		faceBookPage = new FaceBookProfilePage() ;;
+		faceBookPage = new FaceBookProfilePage() ;
 	}
 	
 	@Test(priority=0)
 	public void testfaceBookPageLogin() {
 		
 		Assert.assertEquals(faceBookPage.fbookTitle(),"Facebook – log in or sign up");
-		faceBookPage.faceBookEmail.clear();
-		faceBookPage.faceBookEmail.sendKeys(facebookLogin);
-		faceBookPage.faceBookPassword.clear();
-		faceBookPage.faceBookPassword.sendKeys(facebookPassword);
-		faceBookPage.faceBookSubmit.click();
+		faceBookPage.fBookEmail.clear();
+		faceBookPage.fBookEmail.sendKeys(fbookLogin);
+		faceBookPage.fBookPassword.clear();
+		faceBookPage.fBookPassword.sendKeys(fbookPassword);
+		faceBookPage.fBookSubmit.click();
 		Assert.assertEquals(faceBookPage.fbookTitle(),"Facebook");
 	}
 	
 	@Test(priority=1)
 	public void testFacebookmessagePhoto() throws InterruptedException {
-		faceBookPage.faceBookMEnabler.click();
-		faceBookPage.faceBookMessage.sendKeys(fMessage);
-		faceBookPage.faceBookPhoto.sendKeys(pictureuploadlink);
+		faceBookPage.fBookMEnabler.click();
+		faceBookPage.fBookMessage.sendKeys(fbookMessage);
+		faceBookPage.fBookPhoto.sendKeys(pictureuploadlink);
 	    Thread.sleep(30000);
-		faceBookPage.faceBookMyStories.click();
-		faceBookPage.faceBookMessageSubmit.click();
+		faceBookPage.fBookMyStories.click();
+		faceBookPage.fBookMessageSubmit.click();
 	    Thread.sleep(30000);
-		faceBookPage.faceBookStoryHome.click();
+		faceBookPage.fBookStoryHome.click();
 	    Thread.sleep(30000);
-	    Assert.assertTrue(faceBookPage.isMessageElementPresent(fbookMessage),"Message not present in my stories of Facebook");
-	    Assert.assertTrue(faceBookPage.isPhotoElementPresent(fbookMessage),"Photo not present in my stories of Facebook");
+	    Assert.assertTrue(faceBookPage.isMessagePresent(fbookMessage),"Message not present in my stories of Facebook");
+	    Assert.assertTrue(faceBookPage.isPhotoPresent(fbookMessage),"Photo not present in my stories of Facebook");
 	}
 	
 	@AfterClass
